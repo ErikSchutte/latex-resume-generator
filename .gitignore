@@ -10,6 +10,8 @@ input/
 # All generated output files (PDFs, images, LaTeX)
 output/
 !output/.gitkeep
+!output/example/
+!output/example/**
 
 # Profile photos and images
 *.jpg
@@ -19,7 +21,9 @@ output/
 *.png
 *.PNG
 !templates/**/*.png
+!templates/**/*.jpg
 !docs/**/*.png
+!output/example/**
 
 # ============================================
 # PYTHON

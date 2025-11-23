@@ -1,0 +1,12 @@
+services:
+  resume-builder:
+    build: .
+    volumes:
+      - ./output:/workspace/output
+      - ./data:/workspace/data
+      - ./input:/workspace/input
+      - ./templates:/workspace/templates
+    environment:
+      - LATEX_ENGINE=pdflatex
+    stdin_open: true
+    tty: true

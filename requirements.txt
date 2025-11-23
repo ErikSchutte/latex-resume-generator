@@ -1,0 +1,27 @@
+# Python Requirements for LaTeX Resume Generation System
+
+# Core dependencies
+pydantic>=2.8.0
+pydantic[email]
+
+# Template engine
+jinja2>=3.1.4
+
+# CLI
+click>=8.1.7
+
+# Date handling
+python-dateutil>=2.8.2
+
+# Testing
+pytest>=7.4.3
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+
+# Code quality
+black>=23.12.1
+ruff>=0.1.9
+mypy>=1.7.1
+
+# Type stubs
+types-python-dateutil

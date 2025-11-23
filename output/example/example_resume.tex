@@ -1,0 +1,237 @@
+\documentclass{awesome-cv}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TWO COLUMN LAYOUT - SIDEBAR (LEFT) AND MAIN CONTENT (RIGHT)
+%----------------------------------------------------------------------------------------
+
+\columnratio{0.31}
+\begin{paracol}{2}
+
+%----------------------------------------------------------------------------------------
+%	LEFT SIDEBAR - PHOTO, CONTACT, SKILLS
+%----------------------------------------------------------------------------------------
+
+\switchcolumn[0]
+
+% Photo
+\begin{center}
+\begin{tikzpicture}
+    \node[circle, minimum size=3.5cm, path picture={
+        \node at (path picture bounding box.center){
+            \includegraphics[width=3.5cm]{profile_photo_final.png}
+        };
+    }] {};
+    \draw[line width=3pt, primary] (0,0) circle (1.75cm);
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2em}
+
+% Name and Title
+\begin{center}
+
+
+
+
+{\fontsize{20}{24}\selectfont\color{black}John \textbf{Doe}}\\[0.15em]
+
+{\fontsize{10}{12}\selectfont\color{black}Senior Software Engineer | Cloud \& DevOps}
+\end{center}
+
+\vspace{0.3em}
+
+% Contact Information
+\sidebarheading{\colorheading{Con}{tact}}
+
+\contactitem{\faPhone}{+1 555 123 4567}
+\contactitem{\faEnvelope}{\href{mailto:john.doe@example.com}{john.doe@example.com}}
+
+\contactitem{\faLinkedin}{\href{https://www.linkedin.com/in/johndoe/}{LinkedIn}}
+
+
+\contactitem{\faGithub}{\href{https://github.com/johndoe}{GitHub}}
+
+\contactitem{\faMapMarker}{San Francisco, CA}
+
+\vspace{0.3em}
+
+% Skills - Top Categories in Sidebar
+\sidebarheading{\colorheading{Key}{} Skills}
+
+
+
+
+{\linespread{0.7}\selectfont\textbf{\color{black}Cloud Platforms}\\[0.002em]
+
+$\circ$ \color{text}AWS\\[-0.005em]
+$\circ$ \color{text}Azure\\[-0.005em]
+$\circ$ \color{text}GCP\\[-0.005em]}
+\vspace{0.005em}
+
+
+
+
+
+{\linespread{0.7}\selectfont\textbf{\color{black}\skillcatheading{Con}{tainer Orchestration \& Kubernetes}}\\[0.002em]
+
+$\circ$ \color{text}Kubernetes\\[-0.005em]
+$\circ$ \color{text}Docker\\[-0.005em]
+$\circ$ \color{text}Helm\\[-0.005em]
+$\circ$ \color{text}Istio\\[-0.005em]}
+\vspace{0.005em}
+
+
+
+
+
+{\linespread{0.7}\selectfont\textbf{\color{black}\skillcatheading{Inf}{rastructure \& Security}}\\[0.002em]
+
+$\circ$ \color{text}Terraform\\[-0.005em]
+$\circ$ \color{text}Ansible\\[-0.005em]
+$\circ$ \color{text}Vault\\[-0.005em]
+$\circ$ \color{text}Zero-Trust Architecture\\[-0.005em]}
+\vspace{0.005em}
+
+
+
+
+
+
+
+
+
+
+
+\vspace{0.2em}
+\sidebarheading{\colorheading{Cer}{tifications}}
+
+
+\textbf{\color{black}AWS Certified Solutions Architect} {\small\color{accent}(2023 Jan)}\\
+{\small\color{text}Amazon Web Services}\\[0.2em]
+
+\textbf{\color{black}Certified Kubernetes Administrator (CKA)} {\small\color{accent}(2022 Jun)}\\
+{\small\color{text}Cloud Native Computing Foundation}\\[0.2em]
+
+
+
+% Education in Sidebar
+\needspace{10\baselineskip}
+\vspace{0.2em}
+\sidebarheading{\colorheading{Edu}{cation}}
+
+
+\textbf{\color{black}B.Sc. Computer Science}\\
+{\small\color{text}University of Example}\\
+{\small\color{accent}2018}\\[0.2em]
+
+
+% Languages in Sidebar
+
+\vspace{0.2em}
+\sidebarheading{\colorheading{Lan}{guages}}
+
+
+\textbf{\color{black}English}\\
+{\small\color{text}Native Speaker}\\[0.2em]
+
+\textbf{\color{black}Spanish}\\
+{\small\color{text}Professional Working Proficiency}\\[0.2em]
+
+
+
+% Personal Interests & Hobbies in Sidebar
+
+\vspace{0.2em}
+\sidebarheading{\colorheading{Int}{erests \& Hobbies}}
+
+{\linespread{0.7}\selectfont
+$\circ$ \color{text}Open Source Contribution\\[-0.005em]
+$\circ$ \color{text}Cloud Architecture\\[-0.005em]
+$\circ$ \color{text}Automation\\[-0.005em]
+$\circ$ \color{text}Mountain Biking\\[-0.005em]
+$\circ$ \color{text}Photography\\[-0.005em]
+$\circ$ \color{text}Reading Tech Blogs\\[-0.005em]}
+
+
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN - MAIN CONTENT
+%----------------------------------------------------------------------------------------
+
+\switchcolumn[1]
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+
+
+\section{\colorheading{Sum}{mary}}
+
+Experienced software engineer with expertise in cloud infrastructure, container orchestration, and DevOps practices. Passionate about building scalable, reliable systems and fostering collaborative team environments.
+
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{\colorheading{Pro}{fessional Experience}}
+
+
+\experience{Senior Software Engineer}{Tech Company}{Jan 2022 -- Present}{San Francisco, CA}{
+
+    \item Led migration of legacy applications to cloud-native architecture, reducing infrastructure costs by 40\%.
+
+    \item Designed and implemented CI/CD pipelines using GitLab CI, improving deployment frequency by 3x.
+
+    \item Mentored junior engineers on best practices for containerization and Kubernetes deployments.
+
+}
+
+
+\experience{DevOps Engineer}{Previous Company}{Jun 2019 -- Dec 2021}{Seattle, WA}{
+
+    \item Automated infrastructure provisioning using Terraform and Ansible.
+
+    \item Implemented monitoring and alerting solutions using Prometheus and Grafana.
+
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL SKILLS & TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+
+\section{\colorheading{Add}{itional Skills \& Technologies}}
+
+
+
+
+
+
+
+
+
+\skillcategory{Automation \& CI/CD}{GitLab CI/CD, GitHub Actions, Jenkins, ArgoCD}
+
+
+
+
+\skillcategory{Observability \& Monitoring}{Prometheus, Grafana, DataDog, ELK Stack}
+
+
+
+
+\skillcategory{Programming \& Tools}{Python, Go, Bash, Git}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{paracol}
+
+\end{document}

@@ -1,0 +1,182 @@
+\documentclass{awesome-cv}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TWO COLUMN LAYOUT - SIDEBAR (LEFT) AND MAIN CONTENT (RIGHT)
+%----------------------------------------------------------------------------------------
+
+\columnratio{0.31}
+\begin{paracol}{2}
+
+%----------------------------------------------------------------------------------------
+%	LEFT SIDEBAR - PHOTO, CONTACT, SKILLS
+%----------------------------------------------------------------------------------------
+
+\switchcolumn[0]
+
+% Photo
+\begin{center}
+\begin{tikzpicture}
+    \node[circle, minimum size=3.5cm, path picture={
+        \node at (path picture bounding box.center){
+            \includegraphics[width=3.5cm]{profile_photo_final.png}
+        };
+    }] {};
+    \draw[line width=3pt, primary] (0,0) circle (1.75cm);
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2em}
+
+% Name and Title
+\begin{center}
+<BLOCK>set escaped_name = contact.name|latex_escape</BLOCK>
+<BLOCK>set first_name = escaped_name.split()[0] if ' ' in escaped_name else escaped_name</BLOCK>
+<BLOCK>set last_name = ' '.join(escaped_name.split()[1:]) if ' ' in escaped_name else ''</BLOCK>
+<BLOCK>if last_name</BLOCK>
+{\fontsize{20}{24}\selectfont\color{black}<VAR>first_name</VAR> \textbf{<VAR>last_name</VAR>}}\\[0.15em]
+<BLOCK>else</BLOCK>
+{\fontsize{20}{24}\selectfont\color{black}\textbf{<VAR>first_name</VAR>}}\\[0.15em]
+<BLOCK>endif</BLOCK>
+{\fontsize{10}{12}\selectfont\color{black}<VAR>contact.position_title|latex_escape</VAR>}
+\end{center}
+
+\vspace{0.3em}
+
+% Contact Information
+\sidebarheading{\colorheading{Con}{tact}}
+
+\contactitem{\faPhone}{<VAR>contact.phone|latex_escape</VAR>}
+\contactitem{\faEnvelope}{\href{mailto:<VAR>contact.email</VAR>}{<VAR>contact.email|latex_escape</VAR>}}
+<BLOCK>if has_linkedin</BLOCK>
+\contactitem{\faLinkedin}{\href{<VAR>contact.linkedin</VAR>}{LinkedIn}}
+<BLOCK>endif</BLOCK>
+<BLOCK>if has_github</BLOCK>
+\contactitem{\faGithub}{\href{<VAR>contact.github</VAR>}{GitHub}}
+<BLOCK>endif</BLOCK>
+\contactitem{\faMapMarker}{<VAR>contact.location|latex_escape</VAR>}
+
+\vspace{0.3em}
+
+% Skills - Top Categories in Sidebar
+\sidebarheading{\colorheading{Key}{} Skills}
+
+<BLOCK>for category, skill_list in skills.items()</BLOCK>
+<BLOCK>if loop.index <= 3</BLOCK>
+<BLOCK>if category == "Cloud Service Providers"</BLOCK>
+{\linespread{0.7}\selectfont\textbf{\color{black}\skillcatheading{Clo}{ud Service Providers}}\\[0.002em]
+<BLOCK>for skill in skill_list</BLOCK>
+$\circ$ \color{text}<VAR>skill|latex_escape</VAR>\\[-0.005em]<BLOCK>endfor</BLOCK>}
+\vspace{0.005em}
+<BLOCK>elif category == "Container Orchestration & Kubernetes"</BLOCK>
+{\linespread{0.7}\selectfont\textbf{\color{black}\skillcatheading{Con}{tainer Orchestration \& Kubernetes}}\\[0.002em]
+<BLOCK>for skill in skill_list</BLOCK>
+$\circ$ \color{text}<VAR>skill|latex_escape</VAR>\\[-0.005em]<BLOCK>endfor</BLOCK>}
+\vspace{0.005em}
+<BLOCK>elif category == "Infrastructure & Security"</BLOCK>
+{\linespread{0.7}\selectfont\textbf{\color{black}\skillcatheading{Inf}{rastructure \& Security}}\\[0.002em]
+<BLOCK>for skill in skill_list</BLOCK>
+$\circ$ \color{text}<VAR>skill|latex_escape</VAR>\\[-0.005em]<BLOCK>endfor</BLOCK>}
+\vspace{0.005em}
+<BLOCK>else</BLOCK>
+{\linespread{0.7}\selectfont\textbf{\color{black}<VAR>category|latex_escape</VAR>}\\[0.002em]
+<BLOCK>for skill in skill_list</BLOCK>
+$\circ$ \color{text}<VAR>skill|latex_escape</VAR>\\[-0.005em]<BLOCK>endfor</BLOCK>}
+\vspace{0.005em}
+<BLOCK>endif</BLOCK>
+<BLOCK>endif</BLOCK>
+<BLOCK>endfor</BLOCK>
+
+<BLOCK>if has_certifications</BLOCK>
+\vspace{0.2em}
+\sidebarheading{\colorheading{Cer}{tifications}}
+
+<BLOCK>for cert in certifications</BLOCK>
+\textbf{\color{black}<VAR>cert.name|latex_escape</VAR>}<BLOCK>if cert.date</BLOCK> {\small\color{accent}(<VAR>cert.date|latex_escape</VAR>)}<BLOCK>endif</BLOCK>\\
+<BLOCK>if cert.issuer</BLOCK>{\small\color{text}<VAR>cert.issuer|latex_escape</VAR>}\\<BLOCK>endif</BLOCK>[0.2em]
+<BLOCK>endfor</BLOCK>
+<BLOCK>endif</BLOCK>
+
+% Education in Sidebar
+\needspace{10\baselineskip}
+\vspace{0.2em}
+\sidebarheading{\colorheading{Edu}{cation}}
+
+<BLOCK>for edu in education</BLOCK>
+\textbf{\color{black}<VAR>edu.degree|latex_escape</VAR>}\\
+{\small\color{text}<VAR>edu.institution|latex_escape</VAR>}\\
+{\small\color{accent}<VAR>edu.year</VAR>}\\[0.2em]
+<BLOCK>endfor</BLOCK>
+
+% Languages in Sidebar
+<BLOCK>if has_languages</BLOCK>
+\vspace{0.2em}
+\sidebarheading{\colorheading{Lan}{guages}}
+
+<BLOCK>for lang in languages</BLOCK>
+\textbf{\color{black}<VAR>lang.language|latex_escape</VAR>}\\
+{\small\color{text}<VAR>lang.proficiency|latex_escape</VAR>}\\[0.2em]
+<BLOCK>endfor</BLOCK>
+<BLOCK>endif</BLOCK>
+
+% Personal Interests & Hobbies in Sidebar
+<BLOCK>if interests</BLOCK>
+\vspace{0.2em}
+\sidebarheading{\colorheading{Int}{erests \& Hobbies}}
+
+{\linespread{0.7}\selectfont<BLOCK>for interest in interests</BLOCK>
+$\circ$ \color{text}<VAR>interest|latex_escape</VAR>\\[-0.005em]<BLOCK>endfor</BLOCK>}
+<BLOCK>endif</BLOCK>
+
+%----------------------------------------------------------------------------------------
+%	RIGHT COLUMN - MAIN CONTENT
+%----------------------------------------------------------------------------------------
+
+\switchcolumn[1]
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL SUMMARY
+%----------------------------------------------------------------------------------------
+
+<BLOCK>if summary</BLOCK>
+\section{\colorheading{Sum}{mary}}
+
+<VAR>summary|latex_escape</VAR>
+<BLOCK>endif</BLOCK>
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{\colorheading{Pro}{fessional Experience}}
+
+<BLOCK>for exp in experience</BLOCK>
+\experience{<VAR>exp.role|latex_escape</VAR>}{<VAR>exp.company|latex_escape</VAR>}{<VAR>exp.start_date|format_date</VAR> -- <VAR>exp.end_date|format_date</VAR>}{<VAR>exp.location|latex_escape</VAR>}{
+<BLOCK>for achievement in exp.achievements</BLOCK>
+    \item <VAR>achievement|latex_escape</VAR>
+<BLOCK>endfor</BLOCK>
+}
+
+<BLOCK>endfor</BLOCK>
+
+%----------------------------------------------------------------------------------------
+%	ADDITIONAL SKILLS & TECHNOLOGIES
+%----------------------------------------------------------------------------------------
+
+<BLOCK>if skills|length > 3</BLOCK>
+\section{\colorheading{Add}{itional Skills \& Technologies}}
+
+<BLOCK>for category, skill_list in skills.items()</BLOCK>
+<BLOCK>if loop.index > 3</BLOCK>
+\skillcategory{<VAR>category|latex_escape</VAR>}{<VAR>', '.join(skill_list)|latex_escape</VAR>}
+
+<BLOCK>endif</BLOCK>
+<BLOCK>endfor</BLOCK>
+<BLOCK>endif</BLOCK>
+
+%----------------------------------------------------------------------------------------
+
+\end{paracol}
+
+\end{document}

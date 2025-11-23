@@ -2,6 +2,8 @@
 
 LaTeX-based resume generator with a two-column layout for tech professionals.
 
+> This tool is generated using LLMs out of a personal interest in possibilities and capabilities of AI-assisted software development. It is not affiliated with any employer or organization.
+
 ## Features
 
 - Two-column design with sidebar
@@ -121,7 +123,7 @@ See `input/example_data.json` for complete example.
 
 ```bash
 # Process photo backgrounds
-python3 src/process_profile_photo2.py
+python3 src/process_profile_photo.py
 
 # Save as input/profile_photo.png
 ```

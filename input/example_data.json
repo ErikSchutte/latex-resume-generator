@@ -1,0 +1,84 @@
+{
+  "contact": {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+1 555 123 4567",
+    "linkedin": "https://www.linkedin.com/in/johndoe/",
+    "github": "https://github.com/johndoe",
+    "location": "San Francisco, CA",
+    "position_title": "Senior Software Engineer | Cloud & DevOps"
+  },
+  "summary": "Experienced software engineer with expertise in cloud infrastructure, container orchestration, and DevOps practices. Passionate about building scalable, reliable systems and fostering collaborative team environments.",
+  "experience": [
+    {
+      "company": "Tech Company",
+      "role": "Senior Software Engineer",
+      "location": "San Francisco, CA",
+      "start_date": "2022-01-01",
+      "end_date": null,
+      "achievements": [
+        "Led migration of legacy applications to cloud-native architecture, reducing infrastructure costs by 40%.",
+        "Designed and implemented CI/CD pipelines using GitLab CI, improving deployment frequency by 3x.",
+        "Mentored junior engineers on best practices for containerization and Kubernetes deployments."
+      ]
+    },
+    {
+      "company": "Previous Company",
+      "role": "DevOps Engineer",
+      "location": "Seattle, WA",
+      "start_date": "2019-06-01",
+      "end_date": "2021-12-31",
+      "achievements": [
+        "Automated infrastructure provisioning using Terraform and Ansible.",
+        "Implemented monitoring and alerting solutions using Prometheus and Grafana."
+      ]
+    }
+  ],
+  "skills": {
+    "Cloud Platforms": ["AWS", "Azure", "GCP"],
+    "Container Orchestration & Kubernetes": ["Kubernetes", "Docker", "Helm", "Istio"],
+    "Infrastructure & Security": ["Terraform", "Ansible", "Vault", "Zero-Trust Architecture"],
+    "Automation & CI/CD": ["GitLab CI/CD", "GitHub Actions", "Jenkins", "ArgoCD"],
+    "Observability & Monitoring": ["Prometheus", "Grafana", "DataDog", "ELK Stack"],
+    "Programming & Tools": ["Python", "Go", "Bash", "Git"]
+  },
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "date": "2023 Jan"
+    },
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "issuer": "Cloud Native Computing Foundation",
+      "date": "2022 Jun"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "proficiency": "Native Speaker"
+    },
+    {
+      "language": "Spanish",
+      "proficiency": "Professional Working Proficiency"
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Sc. Computer Science",
+      "institution": "University of Example",
+      "year": 2018,
+      "gpa": null,
+      "honors": null
+    }
+  ],
+  "interests": [
+    "Open Source Contribution",
+    "Cloud Architecture",
+    "Automation",
+    "Mountain Biking",
+    "Photography",
+    "Reading Tech Blogs"
+  ]
+}

@@ -1,0 +1,119 @@
+# ============================================
+# PERSONAL INFORMATION
+# ============================================
+
+# All input data files containing personal information
+input/
+!input/.gitkeep
+!input/example_data.json
+
+# All generated output files (PDFs, images, LaTeX)
+output/
+!output/.gitkeep
+
+# Profile photos and images
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.png
+*.PNG
+!templates/**/*.png
+!docs/**/*.png
+
+# ============================================
+# PYTHON
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================
+# TESTING
+# ============================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+*.cover
+.cache
+nosetests.xml
+coverage.xml
+*.coveragerc
+
+# ============================================
+# IDEs
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.code-workspace
+
+# ============================================
+# LATEX
+# ============================================
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+
+# ============================================
+# DOCKER
+# ============================================
+.dockerignore
+
+# ============================================
+# ENVIRONMENT
+# ============================================
+.env
+.env.local
+.env.*.local
+
+# ============================================
+# LOGS
+# ============================================
+*.log
+logs/
+
+# ============================================
+# OS
+# ============================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+

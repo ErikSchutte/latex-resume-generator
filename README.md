@@ -194,11 +194,15 @@ Fork, create feature branch, add tests, submit PR. See `CONTRIBUTING.md`.
 
 ## License
 
-MIT License - see LICENSE file.
+Dual licensed:
+- Python code (MIT License)
+- LaTeX templates (LPPL 1.3c - derived from [Awesome-CV](https://github.com/posquit0/Awesome-CV))
+
+See LICENSE file for details.
 
 ## Credits
 
-Based on [Awesome-CV](https://github.com/posquit0/Awesome-CV) template.
+LaTeX templates based on [Awesome-CV](https://github.com/posquit0/Awesome-CV) by Claud D. Park.
 
 ---
 
